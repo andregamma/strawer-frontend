@@ -12,13 +12,13 @@ Utilize algum gerenciador de pacotes, como NPM ou Yarn.
 yarn install
 ```
 
-## Usage
+## Uso
 
 ```bash
 yarn start
 ```
 
-## Contributing
+## Contribuindo
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
