@@ -1,7 +1,4 @@
-.background {
-  background: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
-  background: linear-gradient(to right, #8535F8, #B60CFF);
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+body {
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=index.css.map */
