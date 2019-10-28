@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import SvgHead from './assets/SvgHead';
-import './index.css'
 
 export default function Header(){
     return (
