@@ -1,7 +1,7 @@
 import React from "react";
 
 const SvgHead = props => (
-  <svg className="mt-32 ml-128 absolute" style={{transform: `rotate(${5}deg)`}} viewBox="0 0 584.13 449.7" width="35em" height="35em" {...props}>
+  <svg className="mt-32 ml-128 md:ml-24 lg:ml-128 absolute hidden md:block rotate-0 lg:-rotate-5 w-64 md:w-2/4" viewBox="0 0 584.13 449.7"  height="35em" {...props}>
     <defs>
       <linearGradient
         id="head_svg__linear-gradient-21"

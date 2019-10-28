@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@responsive {
+    .rotate-0 {
+        transform: rotate(0deg);
+    }
+    .rotate-5 {
+        transform: rotate(5deg);
+    }
+    /** NEGATIVE */
+    .-rotate-5 {
+        transform: rotate(-5deg);
+    }
+}

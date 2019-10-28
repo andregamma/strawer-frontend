@@ -4038,7 +4038,7 @@ video {
 }
 
 .m-24 {
-  margin: 6rem;
+  margin: 24rem;
 }
 
 .m-32 {
@@ -4059,6 +4059,10 @@ video {
 
 .m-64 {
   margin: 16rem;
+}
+
+.m-90 {
+  margin: 90rem;
 }
 
 .m-128 {
@@ -4143,6 +4147,10 @@ video {
 
 .-m-px {
   margin: -1px;
+}
+
+.m-page {
+  margin: 40rem;
 }
 
 .my-0 {
@@ -4266,13 +4274,13 @@ video {
 }
 
 .my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 24rem;
+  margin-bottom: 24rem;
 }
 
 .mx-24 {
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 24rem;
+  margin-right: 24rem;
 }
 
 .my-32 {
@@ -4323,6 +4331,16 @@ video {
 .mx-64 {
   margin-left: 16rem;
   margin-right: 16rem;
+}
+
+.my-90 {
+  margin-top: 90rem;
+  margin-bottom: 90rem;
+}
+
+.mx-90 {
+  margin-left: 90rem;
+  margin-right: 90rem;
 }
 
 .my-128 {
@@ -4535,6 +4553,16 @@ video {
   margin-right: -1px;
 }
 
+.my-page {
+  margin-top: 40rem;
+  margin-bottom: 40rem;
+}
+
+.mx-page {
+  margin-left: 40rem;
+  margin-right: 40rem;
+}
+
 .mt-0 {
   margin-top: 0;
 }
@@ -4728,19 +4756,19 @@ video {
 }
 
 .mt-24 {
-  margin-top: 6rem;
+  margin-top: 24rem;
 }
 
 .mr-24 {
-  margin-right: 6rem;
+  margin-right: 24rem;
 }
 
 .mb-24 {
-  margin-bottom: 6rem;
+  margin-bottom: 24rem;
 }
 
 .ml-24 {
-  margin-left: 6rem;
+  margin-left: 24rem;
 }
 
 .mt-32 {
@@ -4821,6 +4849,22 @@ video {
 
 .ml-64 {
   margin-left: 16rem;
+}
+
+.mt-90 {
+  margin-top: 90rem;
+}
+
+.mr-90 {
+  margin-right: 90rem;
+}
+
+.mb-90 {
+  margin-bottom: 90rem;
+}
+
+.ml-90 {
+  margin-left: 90rem;
 }
 
 .mt-128 {
@@ -5157,6 +5201,22 @@ video {
 
 .-ml-px {
   margin-left: -1px;
+}
+
+.mt-page {
+  margin-top: 40rem;
+}
+
+.mr-page {
+  margin-right: 40rem;
+}
+
+.mb-page {
+  margin-bottom: 40rem;
+}
+
+.ml-page {
+  margin-left: 40rem;
 }
 
 .max-h-full {
@@ -11617,6 +11677,87 @@ video {
   z-index: auto;
 }
 
+.bg-topaz {
+  background-image: linear-gradient(30deg, #ed8936, #f687b3);
+}
+
+.bg-topaz-dark {
+  background-image: linear-gradient(30deg, #c05621, #d53f8c);
+}
+
+.bg-emerald {
+  background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+  background-image: linear-gradient(to right, #68d391, #38b2ac);
+}
+
+.bg-fireopal {
+  background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+  background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+}
+
+.bg-relay {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+  background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+}
+
+.bg-strawer {
+  background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+  background-image: linear-gradient(to right, #8535F8, #B60CFF);
+}
+
+.bg-mono-circle {
+  background-image: radial-gradient(circle, #CCC, #000);
+}
+
+.hover\:bg-topaz:hover {
+  background-image: linear-gradient(30deg, #ed8936, #f687b3);
+}
+
+.hover\:bg-topaz-dark:hover {
+  background-image: linear-gradient(30deg, #c05621, #d53f8c);
+}
+
+.hover\:bg-emerald:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+  background-image: linear-gradient(to right, #68d391, #38b2ac);
+}
+
+.hover\:bg-fireopal:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+  background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+}
+
+.hover\:bg-relay:hover {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+  background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+}
+
+.hover\:bg-strawer:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+  background-image: linear-gradient(to right, #8535F8, #B60CFF);
+}
+
+.hover\:bg-mono-circle:hover {
+  background-image: radial-gradient(circle, #CCC, #000);
+}
+
+.rotate-0 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.rotate-5 {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+/** NEGATIVE */
+
+.-rotate-5 {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
@@ -15029,7 +15170,7 @@ video {
   }
 
   .sm\:m-24 {
-    margin: 6rem;
+    margin: 24rem;
   }
 
   .sm\:m-32 {
@@ -15050,6 +15191,10 @@ video {
 
   .sm\:m-64 {
     margin: 16rem;
+  }
+
+  .sm\:m-90 {
+    margin: 90rem;
   }
 
   .sm\:m-128 {
@@ -15134,6 +15279,10 @@ video {
 
   .sm\:-m-px {
     margin: -1px;
+  }
+
+  .sm\:m-page {
+    margin: 40rem;
   }
 
   .sm\:my-0 {
@@ -15257,13 +15406,13 @@ video {
   }
 
   .sm\:my-24 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 24rem;
+    margin-bottom: 24rem;
   }
 
   .sm\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .sm\:my-32 {
@@ -15314,6 +15463,16 @@ video {
   .sm\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .sm\:my-90 {
+    margin-top: 90rem;
+    margin-bottom: 90rem;
+  }
+
+  .sm\:mx-90 {
+    margin-left: 90rem;
+    margin-right: 90rem;
   }
 
   .sm\:my-128 {
@@ -15526,6 +15685,16 @@ video {
     margin-right: -1px;
   }
 
+  .sm\:my-page {
+    margin-top: 40rem;
+    margin-bottom: 40rem;
+  }
+
+  .sm\:mx-page {
+    margin-left: 40rem;
+    margin-right: 40rem;
+  }
+
   .sm\:mt-0 {
     margin-top: 0;
   }
@@ -15719,19 +15888,19 @@ video {
   }
 
   .sm\:mt-24 {
-    margin-top: 6rem;
+    margin-top: 24rem;
   }
 
   .sm\:mr-24 {
-    margin-right: 6rem;
+    margin-right: 24rem;
   }
 
   .sm\:mb-24 {
-    margin-bottom: 6rem;
+    margin-bottom: 24rem;
   }
 
   .sm\:ml-24 {
-    margin-left: 6rem;
+    margin-left: 24rem;
   }
 
   .sm\:mt-32 {
@@ -15812,6 +15981,22 @@ video {
 
   .sm\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .sm\:mt-90 {
+    margin-top: 90rem;
+  }
+
+  .sm\:mr-90 {
+    margin-right: 90rem;
+  }
+
+  .sm\:mb-90 {
+    margin-bottom: 90rem;
+  }
+
+  .sm\:ml-90 {
+    margin-left: 90rem;
   }
 
   .sm\:mt-128 {
@@ -16148,6 +16333,22 @@ video {
 
   .sm\:-ml-px {
     margin-left: -1px;
+  }
+
+  .sm\:mt-page {
+    margin-top: 40rem;
+  }
+
+  .sm\:mr-page {
+    margin-right: 40rem;
+  }
+
+  .sm\:mb-page {
+    margin-bottom: 40rem;
+  }
+
+  .sm\:ml-page {
+    margin-left: 40rem;
   }
 
   .sm\:max-h-full {
@@ -22607,6 +22808,87 @@ video {
   .sm\:z-auto {
     z-index: auto;
   }
+
+  .sm\:bg-topaz {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .sm\:bg-topaz-dark {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .sm\:bg-emerald {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .sm\:bg-fireopal {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .sm\:bg-relay {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .sm\:bg-strawer {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .sm\:bg-mono-circle {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .sm\:hover\:bg-topaz:hover {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .sm\:hover\:bg-topaz-dark:hover {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .sm\:hover\:bg-emerald:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .sm\:hover\:bg-fireopal:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .sm\:hover\:bg-relay:hover {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .sm\:hover\:bg-strawer:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .sm\:hover\:bg-mono-circle:hover {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .sm\:rotate-0 {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  .sm\:rotate-5 {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+
+  /** NEGATIVE */
+
+  .sm\:-rotate-5 {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
 }
 
 @media (min-width: 768px) {
@@ -26021,7 +26303,7 @@ video {
   }
 
   .md\:m-24 {
-    margin: 6rem;
+    margin: 24rem;
   }
 
   .md\:m-32 {
@@ -26042,6 +26324,10 @@ video {
 
   .md\:m-64 {
     margin: 16rem;
+  }
+
+  .md\:m-90 {
+    margin: 90rem;
   }
 
   .md\:m-128 {
@@ -26126,6 +26412,10 @@ video {
 
   .md\:-m-px {
     margin: -1px;
+  }
+
+  .md\:m-page {
+    margin: 40rem;
   }
 
   .md\:my-0 {
@@ -26249,13 +26539,13 @@ video {
   }
 
   .md\:my-24 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 24rem;
+    margin-bottom: 24rem;
   }
 
   .md\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .md\:my-32 {
@@ -26306,6 +26596,16 @@ video {
   .md\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .md\:my-90 {
+    margin-top: 90rem;
+    margin-bottom: 90rem;
+  }
+
+  .md\:mx-90 {
+    margin-left: 90rem;
+    margin-right: 90rem;
   }
 
   .md\:my-128 {
@@ -26518,6 +26818,16 @@ video {
     margin-right: -1px;
   }
 
+  .md\:my-page {
+    margin-top: 40rem;
+    margin-bottom: 40rem;
+  }
+
+  .md\:mx-page {
+    margin-left: 40rem;
+    margin-right: 40rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0;
   }
@@ -26711,19 +27021,19 @@ video {
   }
 
   .md\:mt-24 {
-    margin-top: 6rem;
+    margin-top: 24rem;
   }
 
   .md\:mr-24 {
-    margin-right: 6rem;
+    margin-right: 24rem;
   }
 
   .md\:mb-24 {
-    margin-bottom: 6rem;
+    margin-bottom: 24rem;
   }
 
   .md\:ml-24 {
-    margin-left: 6rem;
+    margin-left: 24rem;
   }
 
   .md\:mt-32 {
@@ -26804,6 +27114,22 @@ video {
 
   .md\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .md\:mt-90 {
+    margin-top: 90rem;
+  }
+
+  .md\:mr-90 {
+    margin-right: 90rem;
+  }
+
+  .md\:mb-90 {
+    margin-bottom: 90rem;
+  }
+
+  .md\:ml-90 {
+    margin-left: 90rem;
   }
 
   .md\:mt-128 {
@@ -27140,6 +27466,22 @@ video {
 
   .md\:-ml-px {
     margin-left: -1px;
+  }
+
+  .md\:mt-page {
+    margin-top: 40rem;
+  }
+
+  .md\:mr-page {
+    margin-right: 40rem;
+  }
+
+  .md\:mb-page {
+    margin-bottom: 40rem;
+  }
+
+  .md\:ml-page {
+    margin-left: 40rem;
   }
 
   .md\:max-h-full {
@@ -33599,6 +33941,87 @@ video {
   .md\:z-auto {
     z-index: auto;
   }
+
+  .md\:bg-topaz {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .md\:bg-topaz-dark {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .md\:bg-emerald {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .md\:bg-fireopal {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .md\:bg-relay {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .md\:bg-strawer {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .md\:bg-mono-circle {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .md\:hover\:bg-topaz:hover {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .md\:hover\:bg-topaz-dark:hover {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .md\:hover\:bg-emerald:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .md\:hover\:bg-fireopal:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .md\:hover\:bg-relay:hover {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .md\:hover\:bg-strawer:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .md\:hover\:bg-mono-circle:hover {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .md\:rotate-0 {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  .md\:rotate-5 {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+
+  /** NEGATIVE */
+
+  .md\:-rotate-5 {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -37013,7 +37436,7 @@ video {
   }
 
   .lg\:m-24 {
-    margin: 6rem;
+    margin: 24rem;
   }
 
   .lg\:m-32 {
@@ -37034,6 +37457,10 @@ video {
 
   .lg\:m-64 {
     margin: 16rem;
+  }
+
+  .lg\:m-90 {
+    margin: 90rem;
   }
 
   .lg\:m-128 {
@@ -37118,6 +37545,10 @@ video {
 
   .lg\:-m-px {
     margin: -1px;
+  }
+
+  .lg\:m-page {
+    margin: 40rem;
   }
 
   .lg\:my-0 {
@@ -37241,13 +37672,13 @@ video {
   }
 
   .lg\:my-24 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 24rem;
+    margin-bottom: 24rem;
   }
 
   .lg\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .lg\:my-32 {
@@ -37298,6 +37729,16 @@ video {
   .lg\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .lg\:my-90 {
+    margin-top: 90rem;
+    margin-bottom: 90rem;
+  }
+
+  .lg\:mx-90 {
+    margin-left: 90rem;
+    margin-right: 90rem;
   }
 
   .lg\:my-128 {
@@ -37510,6 +37951,16 @@ video {
     margin-right: -1px;
   }
 
+  .lg\:my-page {
+    margin-top: 40rem;
+    margin-bottom: 40rem;
+  }
+
+  .lg\:mx-page {
+    margin-left: 40rem;
+    margin-right: 40rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0;
   }
@@ -37703,19 +38154,19 @@ video {
   }
 
   .lg\:mt-24 {
-    margin-top: 6rem;
+    margin-top: 24rem;
   }
 
   .lg\:mr-24 {
-    margin-right: 6rem;
+    margin-right: 24rem;
   }
 
   .lg\:mb-24 {
-    margin-bottom: 6rem;
+    margin-bottom: 24rem;
   }
 
   .lg\:ml-24 {
-    margin-left: 6rem;
+    margin-left: 24rem;
   }
 
   .lg\:mt-32 {
@@ -37796,6 +38247,22 @@ video {
 
   .lg\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .lg\:mt-90 {
+    margin-top: 90rem;
+  }
+
+  .lg\:mr-90 {
+    margin-right: 90rem;
+  }
+
+  .lg\:mb-90 {
+    margin-bottom: 90rem;
+  }
+
+  .lg\:ml-90 {
+    margin-left: 90rem;
   }
 
   .lg\:mt-128 {
@@ -38132,6 +38599,22 @@ video {
 
   .lg\:-ml-px {
     margin-left: -1px;
+  }
+
+  .lg\:mt-page {
+    margin-top: 40rem;
+  }
+
+  .lg\:mr-page {
+    margin-right: 40rem;
+  }
+
+  .lg\:mb-page {
+    margin-bottom: 40rem;
+  }
+
+  .lg\:ml-page {
+    margin-left: 40rem;
   }
 
   .lg\:max-h-full {
@@ -44591,6 +45074,87 @@ video {
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:bg-topaz {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .lg\:bg-topaz-dark {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .lg\:bg-emerald {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .lg\:bg-fireopal {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .lg\:bg-relay {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .lg\:bg-strawer {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .lg\:bg-mono-circle {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .lg\:hover\:bg-topaz:hover {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .lg\:hover\:bg-topaz-dark:hover {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .lg\:hover\:bg-emerald:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .lg\:hover\:bg-fireopal:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .lg\:hover\:bg-relay:hover {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .lg\:hover\:bg-strawer:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .lg\:hover\:bg-mono-circle:hover {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .lg\:rotate-0 {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  .lg\:rotate-5 {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+
+  /** NEGATIVE */
+
+  .lg\:-rotate-5 {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
 }
 
 @media (min-width: 1280px) {
@@ -48005,7 +48569,7 @@ video {
   }
 
   .xl\:m-24 {
-    margin: 6rem;
+    margin: 24rem;
   }
 
   .xl\:m-32 {
@@ -48026,6 +48590,10 @@ video {
 
   .xl\:m-64 {
     margin: 16rem;
+  }
+
+  .xl\:m-90 {
+    margin: 90rem;
   }
 
   .xl\:m-128 {
@@ -48110,6 +48678,10 @@ video {
 
   .xl\:-m-px {
     margin: -1px;
+  }
+
+  .xl\:m-page {
+    margin: 40rem;
   }
 
   .xl\:my-0 {
@@ -48233,13 +48805,13 @@ video {
   }
 
   .xl\:my-24 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 24rem;
+    margin-bottom: 24rem;
   }
 
   .xl\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .xl\:my-32 {
@@ -48290,6 +48862,16 @@ video {
   .xl\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .xl\:my-90 {
+    margin-top: 90rem;
+    margin-bottom: 90rem;
+  }
+
+  .xl\:mx-90 {
+    margin-left: 90rem;
+    margin-right: 90rem;
   }
 
   .xl\:my-128 {
@@ -48502,6 +49084,16 @@ video {
     margin-right: -1px;
   }
 
+  .xl\:my-page {
+    margin-top: 40rem;
+    margin-bottom: 40rem;
+  }
+
+  .xl\:mx-page {
+    margin-left: 40rem;
+    margin-right: 40rem;
+  }
+
   .xl\:mt-0 {
     margin-top: 0;
   }
@@ -48695,19 +49287,19 @@ video {
   }
 
   .xl\:mt-24 {
-    margin-top: 6rem;
+    margin-top: 24rem;
   }
 
   .xl\:mr-24 {
-    margin-right: 6rem;
+    margin-right: 24rem;
   }
 
   .xl\:mb-24 {
-    margin-bottom: 6rem;
+    margin-bottom: 24rem;
   }
 
   .xl\:ml-24 {
-    margin-left: 6rem;
+    margin-left: 24rem;
   }
 
   .xl\:mt-32 {
@@ -48788,6 +49380,22 @@ video {
 
   .xl\:ml-64 {
     margin-left: 16rem;
+  }
+
+  .xl\:mt-90 {
+    margin-top: 90rem;
+  }
+
+  .xl\:mr-90 {
+    margin-right: 90rem;
+  }
+
+  .xl\:mb-90 {
+    margin-bottom: 90rem;
+  }
+
+  .xl\:ml-90 {
+    margin-left: 90rem;
   }
 
   .xl\:mt-128 {
@@ -49124,6 +49732,22 @@ video {
 
   .xl\:-ml-px {
     margin-left: -1px;
+  }
+
+  .xl\:mt-page {
+    margin-top: 40rem;
+  }
+
+  .xl\:mr-page {
+    margin-right: 40rem;
+  }
+
+  .xl\:mb-page {
+    margin-bottom: 40rem;
+  }
+
+  .xl\:ml-page {
+    margin-left: 40rem;
   }
 
   .xl\:max-h-full {
@@ -55582,5 +56206,86 @@ video {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:bg-topaz {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .xl\:bg-topaz-dark {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .xl\:bg-emerald {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .xl\:bg-fireopal {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .xl\:bg-relay {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .xl\:bg-strawer {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .xl\:bg-mono-circle {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .xl\:hover\:bg-topaz:hover {
+    background-image: linear-gradient(30deg, #ed8936, #f687b3);
+  }
+
+  .xl\:hover\:bg-topaz-dark:hover {
+    background-image: linear-gradient(30deg, #c05621, #d53f8c);
+  }
+
+  .xl\:hover\:bg-emerald:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#68d391), to(#38b2ac));
+    background-image: linear-gradient(to right, #68d391, #38b2ac);
+  }
+
+  .xl\:hover\:bg-fireopal:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#40E0D0), color-stop(#FF8C00), to(#FF0080));
+    background-image: linear-gradient(to right, #40E0D0, #FF8C00, #FF0080);
+  }
+
+  .xl\:hover\:bg-relay:hover {
+    background-image: -webkit-gradient(linear, right bottom, left top, from(#3A1C71), color-stop(#D76D77), to(#FFAF7B));
+    background-image: linear-gradient(to top left, #3A1C71, #D76D77, #FFAF7B);
+  }
+
+  .xl\:hover\:bg-strawer:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#8535F8), to(#B60CFF));
+    background-image: linear-gradient(to right, #8535F8, #B60CFF);
+  }
+
+  .xl\:hover\:bg-mono-circle:hover {
+    background-image: radial-gradient(circle, #CCC, #000);
+  }
+
+  .xl\:rotate-0 {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  .xl\:rotate-5 {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+
+  /** NEGATIVE */
+
+  .xl\:-rotate-5 {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
 }
