@@ -31,7 +31,7 @@ export default class  Products extends Component {
     render(){
         return (
             <>
-                <section className="Products mt-page">
+                <section className="Products mt-20">
                     <div className="container mx-auto bg-white rounded-lg">
                         <div className="flex md:flex-row-reverse flex-wrap">
                             <div className="w-full md:w-3/4 p-4 text-center text-gray-200">

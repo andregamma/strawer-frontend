@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import SvgHead from './assets/SvgHead';
 
 export default function Header(){
     return (
@@ -19,6 +18,7 @@ export default function Header(){
                             <div className="hidden sm:flex sm:items-center">
                                 <Link to="/" className="text-white text-sm font-semibold mr-4">Início</Link>
                                 <Link to="/products" className="text-white text-sm font-semibold mr-4">Produtos</Link>
+                                <Link to="/contact" className="text-white text-sm font-semibold mr-4">Contato</Link>
                             </div>
 
                             <div className="hidden sm:flex sm:items-center">
@@ -35,33 +35,16 @@ export default function Header(){
                         
                         <div id="mobileNav" className="block bg-strawer border-t-2 py-2 hidden">
                             <div className="flex flex-col">
-                                <a href="#" className="text-white text-sm font-semibold mb-1">Início</a>
-                                <a href="#" className="text-white text-sm font-semibold mb-1">Produtos</a>
+                                <a href="" className="text-white text-sm font-semibold mb-1">Início</a>
+                                <a href="" className="text-white text-sm font-semibold mb-1">Produtos</a>
                                 <div className="flex justify-between items-center border-t-2 pt-2">
-                                    <a href="#" className="text-white text-sm font-semibold mr-4">Entrar</a>
-                                    <a href="#" className="text-white text-sm font-semibold border px-4 py-1 rounded-lg hover:border-purple-600">Criar uma conta</a>
+                                    <a href="" className="text-white text-sm font-semibold mr-4">Entrar</a>
+                                    <a href="" className="text-white text-sm font-semibold border px-4 py-1 rounded-lg hover:border-purple-600">Criar uma conta</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-strawer rotate-0 lg:-rotate-5 w-auto md:w-header h-header flex mb-32 rounded-header absolute z-0">
-                <div className="mt-32 px-4 md:px-20 text-left w-auto md:w-6/12 rotate-0 sm:rotate-5">
-                    <h1 className="text-4xl text-white">Strawer Store</h1>
-                    <h1 className="text-2xl text-white font-light" >Serviços de Desenvolvimento</h1>
-                    <p className="text-white font-normal mt-4">Aqui você encontra os melhores desenvolvedores para colocar sua ideia em prática. Trabalhamos com desenvolvimento de sites, fóruns, criação de bots, scripts para FiveM ou MTA e muito mais!</p>
-                
-                    <div className="flex mb-4 justify-between w-6/12 mt-8">
-                        <button className="bg-white hover:bg-primary text-black font-bold py-2 px-4 rounded-full">
-                            Ver preços
-                        </button>
-                        <button className="bg-transparent hover:bg-secondary text-white font-bold py-2 px-4 border border-primary-500 hover:border-transparent rounded rounded-full">
-                            Ver trabalhos
-                        </button>
-                    </div>
-                </div>
-                <SvgHead />
             </div>
         </div>
       </>

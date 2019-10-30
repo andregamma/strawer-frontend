@@ -17,8 +17,13 @@ module.exports = {
     }),
     extend: {
       margin: {
+        '72': '18rem',
+        '-80': '-20rem',
+        '80': '20rem',
         '24': '24rem',
+        '-25': '-25rem',
         '90': '90rem',
+        '-90': '-90rem',
         '128': '36rem',
         'page': '40rem'
       },
@@ -26,13 +31,16 @@ module.exports = {
         'white': '#FFF',
         'primary': '#793DF6',
         'secondary': '#AD11FD',
+        'title': '#443A5E',
       },
       textColor: {
         'primary': '#793DF6',
-        'secondary': '#AD11FD'
+        'secondary': '#AD11FD',
+        'text': '#443A5E',
       },
       height: {
         'header': '35rem',
+        '48': '45rem',
       },
       width: {
         'header': '103%'
