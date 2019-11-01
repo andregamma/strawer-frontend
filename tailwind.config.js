@@ -15,6 +15,9 @@ module.exports = {
           colors: ['circle', '#CCC', '#000']
       },
     }),
+    container: {
+      padding: '2rem',
+    },
     extend: {
       margin: {
         '72': '18rem',
@@ -39,11 +42,15 @@ module.exports = {
         'text': '#443A5E',
       },
       height: {
+        '88': '22rem',
+        '104': '26rem',
         'header': '35rem',
         '48': '45rem',
       },
       width: {
-        'header': '103%'
+        '88': '22rem',
+        '104': '26rem',
+        'header': '103%',
       },
       borderRadius: {
         'header': '2rem'

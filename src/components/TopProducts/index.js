@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import API from '../../api';
+import API from '../../services/api';
 
 export default class TopProducts extends Component {
     state = {

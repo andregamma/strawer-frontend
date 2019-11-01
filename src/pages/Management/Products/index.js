@@ -1,5 +1,5 @@
 import React from 'react'
-import API from '../../../api';
+import API from '../../../services/api';
 // import { Link } from 'react-router-dom'
 
 export default class Products extends React.Component{

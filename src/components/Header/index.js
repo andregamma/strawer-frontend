@@ -22,8 +22,8 @@ export default function Header(){
                             </div>
 
                             <div className="hidden sm:flex sm:items-center">
-                                <Link to="/login" className="text-white text-sm font-semibold mr-4">Entrar</Link>
-                                <Link to="/register" className="text-white text-sm font-semibold border-2 px-4 py-2 rounded-lg">Criar uma conta</Link>
+                                <Link to="/signin" className="text-white text-sm font-semibold mr-4">Entrar</Link>
+                                <Link to="/signup" className="text-white text-sm font-semibold border-2 px-4 py-2 rounded-lg">Criar uma conta</Link>
                             </div>
 
                             <div className="mobileButton block sm:hidden cursor-pointer">
@@ -35,11 +35,11 @@ export default function Header(){
                         
                         <div id="mobileNav" className="block bg-strawer border-t-2 py-2 hidden">
                             <div className="flex flex-col">
-                                <a href="" className="text-white text-sm font-semibold mb-1">Início</a>
-                                <a href="" className="text-white text-sm font-semibold mb-1">Produtos</a>
+                                <Link to="" className="text-white text-sm font-semibold mb-1">Início</Link>
+                                <Link to="" className="text-white text-sm font-semibold mb-1">Produtos</Link>
                                 <div className="flex justify-between items-center border-t-2 pt-2">
-                                    <a href="" className="text-white text-sm font-semibold mr-4">Entrar</a>
-                                    <a href="" className="text-white text-sm font-semibold border px-4 py-1 rounded-lg hover:border-purple-600">Criar uma conta</a>
+                                    <Link to="" className="text-white text-sm font-semibold mr-4">Entrar</Link>
+                                    <Link to="" className="text-white text-sm font-semibold border px-4 py-1 rounded-lg hover:border-purple-600">Criar uma conta</Link>
                                 </div>
                             </div>
                         </div>

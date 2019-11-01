@@ -1,5 +1,5 @@
 import React from 'react';
-import API from '../../api';
+import API from '../../services/api';
 
 //import './index.css'
 
@@ -7,8 +7,8 @@ export default class Skills extends React.Component{
     state = {
         products: []
     }
-    async componentDidMount() {
-        await API.get(`products`)
+    componentDidMount() {
+        API.get(`products`)
           .then(res => {
             const products = res.data;
             this.setState({ products });
