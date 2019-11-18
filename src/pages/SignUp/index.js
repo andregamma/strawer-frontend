@@ -2,23 +2,40 @@ import React, { Component } from 'react'
 import { Link, withRouter } from "react-router-dom";
 import API from "../../services/api";
 
+import { store } from 'react-notifications-component';
+
+import Pattern from './Pattern.svg'
+
 class SignUp extends Component {
     state = {
-        username: "",
-        email: "",
+        name: "",
+        mail: "",
         password: "",
         error: ""
     };
 
     handleSignUp = async e => {
         e.preventDefault();
-        const { username, email, password } = this.state;
-        if (!username || !email || !password) {
-          this.setState({ error: "Preencha todos os dados para se cadastrar" });
+        const { login, name, mail, password } = this.state;
+        if (!login || !name || !mail || !password) {
+          this.setState({ error: "Preencha todos os dados para se cadastrar." });
         } else {
           try {
-            await API.post("users", { username, email, password });
-            this.props.history.push("/");
+            await API.post("/users", { login, name, mail, password });
+            store.addNotification({
+                title: "Conta criada com sucesso!",
+                message: "Redirecionando em 2 segundos ...",
+                type: "sucess",
+                insert: "bottom",
+                container: "bottom-right",
+                animationIn: ["animated", "fadeIn"],
+                animationOut: ["animated", "fadeOut"],
+                dismiss: {
+                    duration: 2000,
+                    onScreen: true
+                }
+            })
+            this.props.history.push("/signin");
           } catch (err) {
             console.log(err);
             this.setState({ error: "Ocorreu um erro ao registrar sua conta. T.T" });
@@ -27,66 +44,105 @@ class SignUp extends Component {
       };
 
     render(){
+        const BackgroundPattern = {
+            backgroundColor: "#dfdbe5",
+            backgroundImage: `url(${Pattern})`,
+            backgroundPosition: 'cover'
+        }
         return(
             <>
-            <div className="bg-grey-lighter min-h-screen flex flex-col">
-                <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-                    <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-                        <h1 className="mb-8 text-3xl text-center">Sign up</h1>
-                        {this.state.error && <p>{this.state.error}</p>}
-                        <form onSubmit={this.handleSignUp}>
-                            <input 
-                                type="text"
-                                className="block border border-grey-light w-full p-3 rounded mb-4"
-                                name="fullname"
-                                placeholder="Full Name" 
-                                onChange={e => this.setState({ username: e.target.value })} />
-
-                            <input 
-                                type="text"
-                                className="block border border-grey-light w-full p-3 rounded mb-4"
-                                name="email"
-                                placeholder="Email"
-                                onChange={e => this.setState({ email: e.target.value })} />
-
-                            <input 
-                                type="password"
-                                className="block border border-grey-light w-full p-3 rounded mb-4"
-                                name="password"
-                                placeholder="Password" 
-                                onChange={e => this.setState({ password: e.target.value })} />
-                            <input 
-                                type="password"
-                                className="block border border-grey-light w-full p-3 rounded mb-4"
-                                name="confirm_password"
-                                placeholder="Confirm Password" 
-                                onChange={e => this.setState({ password: e.target.value })} />
-
-                            <button
-                                type="submit"
-                                className="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
-                            >Create Account</button>
-                        </form>
-
-                        <div className="text-center text-sm text-grey-dark mt-4">
-                            By signing up, you agree to the 
-                            <a className="no-underline border-b border-grey-dark text-grey-dark" href="#">
-                                Terms of Service
-                            </a> and 
-                            <a className="no-underline border-b border-grey-dark text-grey-dark" href="#">
-                                Privacy Policy
-                            </a>
+            <div className="container mx-auto md:px-32 mt-32">
+                <div className="bg-white rounded shadow-lg flex flex-row-reverse w-full" style={{height:"500px"}}>
+                    <div className="hidden md:block w-2/4 bg-cover bg-center h-full block flex-shrink-0" 
+                        style={BackgroundPattern}>
+                    </div>
+                        <div className="p-5 w-full flex flex-col">
+                            <form onSubmit={this.handleSignUp}>
+                                <div className="flex flex-row">
+                                    <div className="flex flex-col mb-10 w-full">
+                                        <label className="block text-gray-700 text-sm font-medium pb-1" forhtml="email">
+                                            Nome de usuário
+                                        </label>
+                                        <input 
+                                            className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                            id="username"
+                                            type="text"
+                                            placeholder="fulano123"
+                                            onChange={e => this.setState({ login: e.target.value })}
+                                        />
+                                    </div>
+                                    <div className="flex flex-col mb-10 px-4 w-full">
+                                        <label className="block text-gray-700 text-sm font-medium pb-1" forhtml="email">
+                                            Nome completo
+                                        </label>
+                                        <input 
+                                            className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                            id="name"
+                                            type="text"
+                                            placeholder="Fulano"
+                                            onChange={e => this.setState({ name: e.target.value })}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col mb-10 w-full">
+                                    <label className="block text-gray-700 text-sm font-medium pb-1" forhtml="email">
+                                        E-mail
+                                    </label>
+                                    <input 
+                                        className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                        id="email"
+                                        type="email"
+                                        placeholder="seu@email.com"
+                                        onChange={e => this.setState({ mail: e.target.value })}
+                                    />
+                                </div>
+                                <div className="flex flex-col mb-10 w-full">
+                                    <label className="block text-gray-700 text-sm font-medium pb-1" forhtml="password">
+                                        Senha
+                                    </label>
+                                    <input 
+                                        className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                        id="password"
+                                        type="password"
+                                        placeholder="******" 
+                                        onChange={e => this.setState({ password: e.target.value })}
+                                    />
+                                </div>
+                                <div className="flex flex-col w-full">
+                                    <label className="block text-gray-700 text-sm font-medium pb-1" forhtml="password">
+                                        Confirme a senha
+                                    </label>
+                                    <input 
+                                        className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                        id="password2"
+                                        type="password"
+                                        placeholder="******" 
+                                        onChange={e => this.setState({ password: e.target.value })}
+                                    />
+                                </div>
+                                {this.state.error && store.addNotification({
+                                    title: "Opa!",
+                                    message: this.state.error,
+                                    type: "danger",
+                                    insert: "bottom",
+                                    container: "bottom-right",
+                                    animationIn: ["animated", "fadeIn"],
+                                    animationOut: ["animated", "fadeOut"],
+                                    dismiss: {
+                                        duration: 2000,
+                                        onScreen: true
+                                    }
+                                })}
+                                <button 
+                                    className="bg-gray-700 text-white rounded py-2 px-5 w-64 mt-10 float-right"
+                                    type="submit"
+                                >
+                                    Entrar
+                                </button>
+                            </form>
                         </div>
                     </div>
-
-                    <div className="text-grey-dark mt-6">
-                        Already have an account? 
-                        <Link to="/login" className="no-underline border-b border-blue text-blue" >
-                            Log in
-                        </Link>.
-                    </div>
                 </div>
-            </div>
             </>
         )
     }

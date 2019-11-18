@@ -1,11 +1,112 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link, withRouter, NavLink, } from 'react-router-dom'
+import { isAuthenticated } from "../../services/auth";
+import Logout from '../Logout'
 
-export default function Header(){
-    return (
-        <>
-        <div className="Header">
-            <div className="bg-gray-100 w-full font-sans m-0 absolute z-10">
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.openDropdown = this.openDropdown.bind(this);
+        this.closeDropdown = this.closeDropdown.bind(this);
+        this.state = { 
+            openDropdown: false
+        }
+    }
+    openDropdown(e){
+        e.preventDefault();
+        this.setState({ openDropdown: true }, a => {
+            document.addEventListener('click', this.closeDropdown);
+        });
+    }
+    closeDropdown() {
+        this.setState({ openDropdown: false }, () => {
+          document.removeEventListener('click', this.closeDropdown);
+        });
+    }
+
+    NotLoggedHeader(){
+        if(!isAuthenticated()){
+            return (
+                <div className="hidden sm:flex sm:items-center">
+                    <Link to="/signin" className="text-white text-sm font-semibold mr-4">Entrar</Link>
+                    <Link to="/signup" className="text-white text-sm font-semibold border-2 px-4 py-2 rounded-lg">Criar uma conta</Link>
+                </div> 
+            )
+        } else {
+            return (
+                <>
+                <div className="hidden sm:flex sm:items-center">
+                    <button onClick={e => this.openDropdown(e)} className="text-white text-sm font-semibold mr-4 focus:outline-none flex">
+                        Meu perfil
+                        <svg
+                        className="ml-2 h-6 w-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+                        />
+                        </svg>
+                    </button>
+                    { this.state.openDropdown ? (
+                        <div className="mt-32 mr-4 right-0 absolute text-left bg-white rounded-lg shadow-lg">
+                            <div className="w-64">
+                                <div className="flex items-center px-6 py-4">
+                                    <img
+                                        className="h-10 w-10 rounded-full flex-no-shrink"
+                                        src="https://images.unsplash.com/photo-1541271696563-3be2f555fc4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=1.75&w=200&h=200&q=80"
+                                        alt=""
+                                    />
+                                    <div className="ml-4">
+                                        <p className="font-semibold text-gray-900 leading-none">
+                                            Eu
+                                        </p>
+                                        <p>
+                                            <NavLink to="/myprofile"
+                                            className="text-sm text-gray-600 leading-none hover:underline">
+                                                Ver perfil
+                                            </NavLink>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="border-t-2 border-gray-200 py-1">
+                                <NavLink to="/settings" className="block px-6 py-3 leading-tight hover:bg-gray-200">
+                                    Configurações
+                                </NavLink>
+                                <NavLink to="/support" className="block px-6 py-3 leading-tight hover:bg-gray-200">
+                                    Suporte
+                                </NavLink>
+                            </div>
+                            <div className="border-t-2 border-gray-200 py-1 bg-white">
+                                <Logout />
+                            </div>
+                        </div>
+                    ) : (
+                        null
+                    )}
+                </div>
+                </>
+            )
+        }
+    }
+    
+    render(){
+        const defaultRoutes = [
+            { path: '/', name: 'Início'},
+            { path: '/products', name: 'Produtos'},
+            { path: '/contact', name: 'Contato'},
+        ]
+
+        /**const dynamicRoutes = [
+            { path: '/signin', name: 'SignIn'},
+            { path: '/signup', name: 'SignUp'},
+            { path: '/logout', name: 'Logout'},
+        ]*/
+
+        return (
+            <>
+            <nav section="header" className="bg-gray-100 w-full font-sans m-0 absolute z-10">
                 <div className="bg-strawer">
                     <div className="container mx-auto px-4">
                         <div className="flex items-center justify-between py-4">
@@ -16,15 +117,20 @@ export default function Header(){
                             </div>
 
                             <div className="hidden sm:flex sm:items-center">
-                                <Link to="/" className="text-white text-sm font-semibold mr-4">Início</Link>
-                                <Link to="/products" className="text-white text-sm font-semibold mr-4">Produtos</Link>
-                                <Link to="/contact" className="text-white text-sm font-semibold mr-4">Contato</Link>
+                                {defaultRoutes.map(route => (
+                                    <NavLink
+                                        key={route.path}
+                                        as={NavLink}
+                                        to={route.path}
+                                        className="text-white text-sm font-semibold mr-4"
+                                        exact
+                                    >
+                                        {route.name}
+                                    </NavLink>
+                                ))}
                             </div>
 
-                            <div className="hidden sm:flex sm:items-center">
-                                <Link to="/signin" className="text-white text-sm font-semibold mr-4">Entrar</Link>
-                                <Link to="/signup" className="text-white text-sm font-semibold border-2 px-4 py-2 rounded-lg">Criar uma conta</Link>
-                            </div>
+                            {this.NotLoggedHeader()}
 
                             <div className="mobileButton block sm:hidden cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-purple-600" viewBox="0 0 24 24">
@@ -45,8 +151,10 @@ export default function Header(){
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-      </>
-    )
+            </nav>
+        </>
+        )
+    }
 }
+
+export default withRouter(Header)

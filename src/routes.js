@@ -1,5 +1,6 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { CSSTransition } from "react-transition-group";
 
 import PrivateRoute from './PrivateRoute';
 
@@ -10,18 +11,38 @@ import Contact from './pages/Contact'
 import SingleProduct from './pages/SingleProduct'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
+import MyProfile from './pages/MyProfile'
 
+import './styles.css'
+
+const allRoutes = [
+    { path: '/', name: 'Início', Component: Home },
+    { path: '/products', name: 'Produtos', Component: Products },
+    { path: '/products/:productId', name: 'SingleProduct', Component: SingleProduct },
+    { path: '/contact', name: 'Contato', Component: Contact },
+    { path: '/settings', name: 'Contato', Component: MyProfile },
+
+    { path: '/signin', name: 'Entrar', Component: SignIn },
+    { path: '/signup', name: 'Criar uma conta', Component: SignUp },
+]
 export default function Routes(){
     return (
-        <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/products" exact component={Products} />
-            <Route path="/products/:productId" exact component={SingleProduct} />
-            <Route path="/signin" exact component={SignIn} />
-            <Route path="/signup" exact component={SignUp} />
-
-            <Route path="/contact" exact component={Contact} />
-            <PrivateRoute path="/management" component={Management} />
-        </Switch>
+            allRoutes.map(({ path, Component }) => (
+                <Route key={path} exact path={path}>
+                    {({ match }) => (
+                        <CSSTransition
+                            in={match != null}
+                            timeout={800}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                            <div className="page">
+                                <Component />
+                            </div>
+                        </CSSTransition>
+                    )}
+                </Route>
+            ))
+               
     );
 }
